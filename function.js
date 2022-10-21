@@ -1,4 +1,23 @@
 let flag = 0
+
+function start(n){
+  flag = flag + 1
+  let user = n 
+  Valid(user)
+}
+
+function Valid(user){
+  if(user>=0 && user<=2){
+    let bot = generate()
+    let game = ["Rock","Paper","Scissors"]
+    console.log("User chooses:"  + game[user])
+    console.log("Bot chooses:"  + game[bot])
+   check(user,bot)
+  }else{
+    console.log("Enter Valid Range")
+  }
+}
+
 function generate(){
       let b = Math.floor(Math.random()*3)
       return b
@@ -71,25 +90,7 @@ function generate(){
     }
   }
   
-  function Valid(user){
-    if(user>=0 && user<=2){
-      let bot = generate()
-      let game = ["Rock","Paper","Scissors"]
-      console.log("User chooses:"  + game[user])
-      console.log("Bot chooses:"  + game[bot])
-     check(user,bot)
-    }else{
-      console.log("Enter Valid Range")
-    }
-  }
-
-  function start(n){
-    flag = flag + 1
-    let user = n 
-    Valid(user)
-    
-  }
-
+ 
   function remove() {
     for(let i= 0; i<flag ; i++){
       const element = document.getElementById("result");
@@ -102,5 +103,3 @@ function generate(){
       let child = parent.getElementByTagName("p")
       parent.removeChild(child)
   }
-
-

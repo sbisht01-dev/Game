@@ -1,7 +1,7 @@
 body {
     margin:0;
     padding:0;
-    
+    font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 255, 255);
 }
 
@@ -9,6 +9,15 @@ p{
     color:rgb(253, 253, 253);
 }
 
+.header{
+    display: flex;
+    justify-content: center;
+}
+header p{
+    font-size: 70px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
 .main-div{
     display: flex;
     justify-content: center;
@@ -37,8 +46,9 @@ p{
 
 .click-button{
     position: relative;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     color: rgb(255, 255, 255);
     background-color: #000000;
     height: 50px;
@@ -57,7 +67,7 @@ p{
 .click-button:hover{
     box-shadow: 5px 5px 20px #acacac;
     height: 60px;
-    width: 120px;
+    width: 140px;
     border: none;
     color: rgb(253, 253, 253);
     background-color: rgb(0, 0, 0);
@@ -84,14 +94,20 @@ p{
     box-shadow: 5px 5px 15px #808080;
     width: 300px;
     font-size: 18px;
-    font-weight: 300;
 }
 
 #result{
     display: inline-block;
     margin-left: 100px;
-    background-color: black;
-    color: white;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+#result p{
+
+    color: black;
 }
 
 
