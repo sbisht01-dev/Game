@@ -1,62 +1,77 @@
+let flag = 0
 function generate(){
-    let b = Math.floor(Math.random()*3)
-    return b
-  }
-  
-  function check(user,bot){
+      let b = Math.floor(Math.random()*3)
+      return b
+    }
+    
+  function check(user,bot,flag){
+    
     if (user == bot) {
+        
       // console.log("No one wins")
-      let print = 'No one wins'
-      let text = document.createElement('h2')
-      text.innerText = print
-      document.body.appendChild(text)
+
+      let div = document.createElement('div')
+      div.id = 'result'
+      div.innerHTML = '<p>Oops its a Tie</p>'
+      document.body.appendChild(div)
     } else if (user == 1 && bot == 2) {
+      
       // console.log("Bot wins")
-      let print = 'Bot wins'
-      let text = document.createElement('h2')
-      text.innerText = print
-      document.body.appendChild(text)
+
+      let div = document.createElement('div')
+      div.id = 'result'
+      div.innerHTML = '<p>Sorry, Bot Wins</p>'
+      document.body.appendChild(div)
     } else if (user == 2 && bot == 0) {
+      
       // console.log("Bot wins")
-      let print = 'Bot wins'
-      let text = document.createElement('h2')
-      text.innerText = print
-      document.body.appendChild(text)
+
+      let div = document.createElement('div')
+      div.id = 'result'
+      div.innerHTML = '<p>Sorry, Bot Wins</p>'
+      document.body.appendChild(div)
     } else if (user == 1 && bot == 0){
+      
       // console.log("User wins")
-      let print = 'User wins'
-      let text = document.createElement('h2')
-      text.innerText = print
-      document.body.appendChild(text)
+
+      let div = document.createElement('div')
+      div.id = 'result'
+      div.innerHTML = '<p>Congratulations, you won</p>'
+      document.body.appendChild(div)
     } else if (user == 2 && bot == 1){
+      
       // console.log("User wins")
-      let print = 'User wins'
-      let text = document.createElement('h2')
-      text.innerText = print
-      document.body.appendChild(text)
+
+      let div = document.createElement('div')
+      div.id = 'result'
+      div.innerHTML = '<p>Congratulations, you won</p>'
+      document.body.appendChild(div)
     } else if (user == 0 && bot == 2){
+      // flag[1]++
       // console.log("User wins")
-      let print = 'User wins'
-      let text = document.createElement('h2')
-      text.innerText = print
-      document.body.appendChild(text)
+
+      let div = document.createElement('div')
+      div.id = 'result'
+      div.innerHTML = '<p>Congratulations, you won</p>'
+      document.body.appendChild(div)
     } else if (user == 0 && bot == 1){ 
+
       // console.log("Bot wins")
-      let print = 'Bot wins'
-      let text = document.createElement('h2')
-      text.innerText = print
-      document.body.appendChild(text)
+      
+      let div = document.createElement('div')
+      div.id = 'result'
+      div.innerHTML = '<p>Sorry, Bot Wins</p>'
+      document.body.appendChild(div)
     } else {
       // console.log("Wrong Units")
-      let print = 'Wrong Units'
-      let text = document.createElement('h2')
-      text.innerText = print
-      document.body.appendChild(text)
+
+      let div = document.createElement('div')
+      div.id = 'result'
+      div.innerHTML = '<p>Wrong Units</p>'
+      document.body.appendChild(div)
     }
   }
   
- 
-
   function Valid(user){
     if(user>=0 && user<=2){
       let bot = generate()
@@ -70,12 +85,24 @@ function generate(){
   }
 
   function start(n){
+    flag = flag + 1
     let user = n 
     Valid(user)
+    
   }
 
-  // function myFunction() {
-  //   const element = document.getElementById("demo");
-  //   element.remove();
-  // }
+  function remove() {
+    for(let i= 0; i<flag ; i++){
+      const element = document.getElementById("result");
+      element.remove();
+    }
+  }
+
+  function reset(){
+      let parent = document.getElementById("result")
+      let child = parent.getElementByTagName("p")
+      parent.removeChild(child)
+  }
+
+
 

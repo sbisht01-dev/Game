@@ -6,7 +6,7 @@ body {
 }
 
 p{
-    color:rgb(27, 27, 27);
+    color:rgb(253, 253, 253);
 }
 
 .main-div{
@@ -16,38 +16,46 @@ p{
 }
 
 
-.main {
+.main{
     height: 100px;
     display: flex;
     justify-content:center;
     align-items: center;
     position: relative;
-    border-style: dotted;
+    border-color: black;
+    position:relative;
+}
+
+.main-2{
+    height: 100px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
     border-color: black;
 }
 
-.main,button{
-    margin-top: 20vh;
-}
-
 .click-button{
+    position: relative;
     font-size: 16px;
     font-weight: bold;
     color: rgb(255, 255, 255);
     background-color: #000000;
     height: 50px;
     width: 100px;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: #888888;
     border-style:hidden;
     padding-left: 10px;
     padding-right: 10px;
     margin: 10px;
-    transition:  0.3s ease-in-out;
+    cursor: pointer;
+    cursor:pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .click-button:hover{
-    box-shadow: 5px 5px 20px #808080;
+    box-shadow: 5px 5px 20px #acacac;
     height: 60px;
     width: 120px;
     border: none;
@@ -59,24 +67,33 @@ p{
 .enter{
     border: none;
     border-radius: 10px;
+    margin: 0;
     height: 50px;
-    width:120px;
-    width:120px;
+    width:140px;
+    font-size: 20px;
+    font-weight: bold;
     color: rgb(255, 255, 255);
     background-color: #000000;
-    margin-left: calc((100vw/2.25));
-    margin-right:auto;
-    margin-bottom: 50px;
+    /* margin-left: calc((100vw/2.25));
+    margin-right:auto; */
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .enter:hover{
     box-shadow: 5px 5px 15px #808080;
-    width: 140px;
-    font-size: 20px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 
+#result{
+    display: inline-block;
+    margin-left: 100px;
+    background-color: black;
+    color: white;
+}
 
 
 
