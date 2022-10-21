@@ -5,7 +5,6 @@ function generate(){
     }
     
   function check(user,bot,flag){
-    
     if (user == bot) {
         
       // console.log("No one wins")
@@ -103,6 +102,5 @@ function generate(){
       let child = parent.getElementByTagName("p")
       parent.removeChild(child)
   }
-
 
 
