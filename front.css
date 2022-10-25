@@ -97,10 +97,9 @@ header p{
 }
 
 #result{
-    display: inline-block;
     margin-left: 100px;
     width: 250px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
     justify-content: center;
 }
