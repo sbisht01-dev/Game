@@ -98,8 +98,3 @@ function generate(){
     }
   }
 
-  function reset(){
-      let parent = document.getElementById("result")
-      let child = parent.getElementByTagName("p")
-      parent.removeChild(child)
-  }
